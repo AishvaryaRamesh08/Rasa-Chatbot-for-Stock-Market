@@ -1,0 +1,130 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: scope
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- story: define
+  steps:
+  - intent: define_stock
+  - action: utter_define_stock
+
+- story: st_market
+  steps:
+  - intent: stock_market
+  - action: utter_stock_market
+
+- story: st_trading
+  steps:
+  - intent: start_trading
+  - action: utter_start_trading
+
+- story: n_stocks
+  steps:
+  - intent: number_of_stocks
+  - action: utter_no_stocks
+
+- story: st_returns
+  steps:
+  - intent: stock_returns
+  - action: utter_stock_returns
+
+- story: av_stocks
+  steps:
+  - intent: avoid_stocks
+  - action: utter_avoid_stocks
+
+- story: bse
+  steps:
+  - intent: bse_nse
+  - action: utter_bse_nse
+
+- story: dmt
+  steps:
+  - intent: demat
+  - action: utter_demat
+
+- story: bo
+  steps:
+  - intent: bottoming_out
+  - action: utter_bottoming_out
+
+- story: st_resources
+  steps:
+  - intent: stock_resources
+  - action: utter_stock_resources
+
+- story: open_demat
+  steps:
+  - intent: open_demat
+  - action: utter_open_demat
+
+- story: c_price
+  steps:
+    - intent: price
+    - action: action_current_price
+
+- story: b_chl
+  steps:
+    - intent: bot_challenge
+    - action: utter_iamabot
+
+- story: time_now
+  steps:
+    - intent: time
+    - action: action_time_now
+
+- story: st_web
+  steps:
+    - intent: st_web
+    - action: action_st_web
+
+- story: chart
+  steps:
+    - intent: chart
+    - action: action_chart
+
+- story: chart_a
+  steps:
+    - intent: chart_a
+    - action: action_chart_a
+
+- story: chart_b
+  steps:
+    - intent: chart_b
+    - action: action_chart_b
+
+- story: chart_c
+  steps:
+    - intent: chart_c
+    - action: action_chart_c
